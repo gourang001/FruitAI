@@ -1,0 +1,112 @@
+/* Centering the content and setting a modern background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #6EE7B7, #3B82F6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container styling */
+.home-container {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 800px;
+    transition: transform 0.3s ease;
+}
+
+/* Add slight scale on container hover */
+.home-container:hover {
+    transform: scale(1.02);
+}
+
+/* Heading styling */
+.home-container h1 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Flexbox for services */
+.services {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual service box */
+.service {
+    background: #FFFFFF;
+    color: #333;
+    padding: 25px;
+    border-radius: 12px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* Add some hover effect */
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background: #F0F4F8;
+}
+
+/* Service title styling */
+.service h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+}
+
+/* Adding decorative element behind service title */
+.service::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    transition: 0.3s ease;
+}
+
+/* Service box hover before effect */
+.service:hover::before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Add button styling */
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #3B82F6, #4ADE80);
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #2563EB, #34D399);
+    transform: scale(1.05);
+}
